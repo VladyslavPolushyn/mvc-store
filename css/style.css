@@ -1,0 +1,102 @@
+header {
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.content {
+    min-height: 100vh;
+}
+
+.card {
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.3);
+}
+
+.card button {
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 30px;
+    color: #fff;
+    padding: 20px;
+}
+
+.dropdown-item:hover {
+    cursor: pointer;
+}
+
+.cart-item input, .cart-item button {
+    font-size: 12px;
+}
+
+.cart-item input {
+    max-width: 60px;
+}
+
+.preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+}
+
+.cart-count {
+    font-size: 10px;
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 50%;
+    top: 0;
+    right: 5px;
+}
+  
+  /* LOADER */
+  
+.preloader span {
+    display: flex;
+    position: relative;
+    animation: rotateLoad infinite linear 1s;
+}
+.preloader span.mini{ width: 15px; height: 15px; }
+.preloader span.little { width: 25px; height: 25px; }
+.preloader span { width: 60px; height: 60px; }
+.preloader span:before,
+.preloader span:after {
+    display: flex;
+    position: absolute;
+    content: '';
+    background: #1E88E5;
+    border-radius: 50%;
+    width: 55%;
+    height: 55%;
+}
+.preloader span:before { right: 0; bottom: 0; animation: scaleChange_1 infinite linear 1s; }
+.preloader span:after { top: 0; left: 0; animation: scaleChange_2 infinite linear 1s; }
+.preloader span.dark:before,
+.preloader span.dark:after { background: #222; }
+.preloader span.mini:after { border-width: 2px; }
+.preloader span.little:after { border-width: 3px; }
+.preloader span:after { border-width: 8px; }
+
+@keyframes rotateLoad {
+    0%    { transform: rotate(0deg); }
+    100%  { transform: rotate(360deg); }
+}
+@keyframes scaleChange_1 {
+    0%    { transform: scale(1); }
+    50%   { transform: scale(0); }
+    100%  { transform: scale(1); }
+}
+@keyframes scaleChange_2 {
+    0%    { transform: scale(0); }
+    50%   { transform: scale(1); }
+    100%  { transform: scale(0); }
+}
+
